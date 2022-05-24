@@ -2,10 +2,7 @@ const navbar = document.querySelector(".navbar");
 const navbarColor = document.querySelector("#navbar-logo-dynamic-color");
 const navbarLinks = document.querySelectorAll(".navbar-link");
 const navbarHeader3 = document.querySelector(".home-header3-dynamic");
-const serviceBoxes = document.querySelectorAll(".services-box");
-const serviceIcons = document.querySelectorAll(".fa-solid");
-const serviceHeaders = document.querySelectorAll(".service-card-header");
-const serviceParas = document.querySelectorAll(".service-card-para");
+const burger = document.querySelector(".navbar-burger");
 
 document.addEventListener("scroll", function(){
     if(scrollY > 12){
@@ -26,11 +23,16 @@ document.addEventListener("scroll", function(){
     }
 })
 
-serviceBoxes.forEach(function(item){
-    item.addEventListener("mouseover", function(e){
-        console.log(e.target);
-    });
-});
+burger.addEventListener("click", function(e){
+    if(e.target.classList.value !== "fa-solid fa-xmark"){
+        e.target.classList.remove("fa-bars");
+        e.target.classList.add("fa-xmark");
+    }
+    else{
+        e.target.classList.remove("fa-xmark");
+        e.target.classList.add("fa-bars");
+    }
+})
 
 let typed = new Typed(".typing", {
     strings: ["Youtuber", "Developer", "Blogger", "Designer", "Freelancer"],
