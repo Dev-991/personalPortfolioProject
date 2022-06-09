@@ -533,12 +533,11 @@
     margin-top: 5px;
 }
 
-.teams-content{
-    margin: 50px 0 90px 0;
+.teams-content.owl-carousel{
+    margin: 50px 0 30px 0;
     display: flex;
     justify-content: space-between;
     width: 84%;
-    flex-wrap: wrap;
 }
 
 .teams-card{
@@ -558,7 +557,7 @@
 
 .teams-card-img{
     height: 150px;
-    width: 150px;
+    width: 150px !important;
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid crimson;
@@ -590,6 +589,31 @@
 
 .teams-card:hover{
     background-color: crimson;
+}
+
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none !important;
+    border-radius: 50%;
+    border: 2px solid crimson !important;
+    transition: all 0.3s ease;
+}
+
+.owl-dot:hover{
+    background-color: crimson !important;
+}
+
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+    background-color: crimson !important;
 }
 
 @media only screen and (max-width: 768px){
